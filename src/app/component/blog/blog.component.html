@@ -1,0 +1,187 @@
+<app-navbar></app-navbar>
+
+<section class="hero-wrap hero-wrap-2" [ngStyle]="{ 'background-image': 'url(' + background2 + ')'}" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+      <div class="col-md-9  pb-5">
+        <h2 class="mb-0 bread">Blog</h2>
+        <br>
+        <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Blog <i class="ion-ios-arrow-forward"></i></span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section ftco-degree-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 ">
+        <div class="row">
+          <div class="col-md-12 d-flex ">
+            <div class="blog-entry align-self-stretch d-md-flex">
+              <a href="blog-single.html" class="block-20" [ngStyle]="{ 'background-image': 'url(' + blog1 + ')'}">
+              </a>
+              <div class="text d-block pl-md-4">
+                <div class="meta mb-3">
+                  <div><a>23rd December 2020</a></div>
+                  <div><a>Galle Face Hotel, Colombo</a></div>
+                </div>
+                <h3 class="heading"><a href="">Product Launch Ceromony</a></h3>
+                <p>Romofy (Pvt). Limited  is celebrating the launch of their new product, which cater to the beauty and fashion industry and you are invited on end of December 2020 at Galle Face Hotel, Colombo.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 d-flex ">
+            <div class="blog-entry align-self-stretch d-md-flex">
+              <a href="blog-single.html" class="block-20" [ngStyle]="{ 'background-image': 'url(' + blog1 + ')'}">
+              </a>
+              <div class="text d-block pl-md-4">
+                <div class="meta mb-3">
+                  <div><a>10th March 2019</a></div>
+                </div>
+                <h3 class="heading"><a href="">Annual Printers Conference</a></h3>
+                <p>Romofy (Pvt). Limited  is celebrating the launch of their new product, which cater to the beauty and fashion industry and you are invited on end of December 2020 at Galle Face Hotel, Colombo.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 d-flex ">
+            <div class="blog-entry align-self-stretch d-md-flex">
+              <a href="blog-single.html" class="block-20" [ngStyle]="{ 'background-image': 'url(' + blog1 + ')'}">
+              </a>
+              <div class="text d-block pl-md-4">
+                <div class="meta mb-3">
+                  <div><a>15th September 2018</a></div>
+                </div>
+                <h3 class="heading"><a href="">Youth Entrepreneurship Award</a></h3>
+                <p>Romofy (Pvt). Limited  is celebrating the launch of their new product, which cater to the beauty and fashion industry and you are invited on end of December 2020 at Galle Face Hotel, Colombo.</p>
+              </div>
+            </div>
+          </div>
+          <!--          <div class="col-md-12 d-flex ">-->
+          <!--            <div class="blog-entry align-self-stretch d-md-flex">-->
+          <!--              <a href="blog-single.html" class="block-20" [ngStyle]="{ 'background-image': 'url(' + blog4 + ')'}">-->
+          <!--              </a>-->
+          <!--              <div class="text d-block pl-md-4">-->
+          <!--                <div class="meta mb-3">-->
+          <!--                  <div><a>30th September 2017</a></div>-->
+          <!--                </div>-->
+          <!--                <h3 class="heading"><a href="#">Inaugural MedHack Winners</a></h3>-->
+          <!--                <p>Romofy Engineering Manager D.M.K.P Dissanayake was one of the main Developer in the Winning Team at the Inaugural MedHack 2017</p>-->
+          <!--              </div>-->
+          <!--            </div>-->
+          <!--          </div>-->
+          <!-- .col-md-8 -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div id="container">
+<!--  <div-->
+<!--    ng2-carouselamos-->
+<!--    class="slides-wrapper"-->
+<!--    [items]="salonList"-->
+<!--    [width]="1500"-->
+<!--    [$prev]="prev"-->
+<!--    [$next]="next"-->
+<!--    [$item]="item"-->
+<!--  >-->
+<!--  </div>-->
+
+
+  <ng-template #prev>
+    <img src="assets/images/back.png" style="height: 20px; width: 20px"  id="left" />
+  </ng-template>
+  <ng-template #next>
+    <img src="assets/images/next.png" style="height: 20px; width: 20px"  id="right" />
+  </ng-template>
+  <ng-template #item let-item let-i="index">
+
+    <section class="ftco-section ftco-pricing">
+      <div class="container">
+        <div class="row justify-content-center pb-3">
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="pricing-entry pb-5 text-center">
+              <div>
+                <div class="slide-items">
+                  <img src="{{ item.salonLogo }}" style="height: 300px; width: 300px">
+                </div>
+                <br>
+                <br>
+                <br>
+                <p><span class="price">{{item.salonName}}</span></p>
+                <ul>
+                  <h5>({{item.city}})</h5>
+                  <h6>{{item.salonName}} powered by Kalonish</h6>
+                  <br>
+                  <h6><span class="highlighted-text">Silver Partner</span></h6>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </ng-template>
+</div>
+<!--<section class="ftco-section ftco-team">-->
+<!--  <div class="container">-->
+<!--    <div class="row justify-content-center pb-3">-->
+<!--      <div class="col-md-10 heading-section text-center">-->
+<!--        <h1 class="big">Team</h1>-->
+<!--        <span class="subheading">Team Leads</span>-->
+<!--        <h2 class="mb-4">Our Team</h2>-->
+<!--        <p>Meet our team of specialized marketers and business developers which will help you research new products and launch them in new emerging markets.</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="container">-->
+<!--    <div class="row">-->
+
+<!--      &lt;!&ndash;      <div class="col-md-12">&ndash;&gt;-->
+<!--      &lt;!&ndash;        <div>&ndash;&gt;-->
+<!--      <div class="col-md-1">-->
+<!--      </div>-->
+<!--      <div class="col-md-3">-->
+<!--        <div class="item">-->
+<!--          <a href="#" class="team text-center">-->
+<!--            <div class="img" [ngStyle]="{ 'background-image': 'url(' + blog2 + ')'}"></div>-->
+<!--            <h2>Rukshi Rushan</h2>-->
+<!--            <span class="position">Sales and Marketing Manager</span>-->
+<!--          </a>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="col-md-3">-->
+<!--        <div class="item">-->
+<!--          <a href="#" class="team text-center">-->
+<!--            <div class="img" [ngStyle]="{ 'background-image': 'url(' + team2 + ')'}"></div>-->
+<!--            <h2>Kasun Dissanayake</h2>-->
+<!--            <span class="position">Engineering Manager - Web</span>-->
+<!--            <h5></h5>-->
+<!--          </a>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="col-md-3">-->
+<!--        <div class="item">-->
+<!--          <a href="#" class="team text-center">-->
+<!--            <div class="img" [ngStyle]="{ 'background-image': 'url(' + team3 + ')'}"></div>-->
+<!--            <h2>Pramodaya Jayalath</h2>-->
+<!--            <span class="position">Engineering Manager - Mobile</span>-->
+<!--          </a>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div class="col-md-1">-->
+<!--      </div>-->
+<!--      &lt;!&ndash;        </div>&ndash;&gt;-->
+<!--      &lt;!&ndash;      </div>&ndash;&gt;-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+<app-footer></app-footer>

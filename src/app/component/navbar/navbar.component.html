@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+  <div class="container">
+    <a class="navbar-brand" [routerLink]="['/']" ><img class="img" src="assets/images/logo1.png"> </a>
+    <button class="navbar-toggler" (click)="menuClick()" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="oi oi-menu"></span> Menu
+    </button>
+
+    <div class="{{collapse}}" id="ftco-nav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" [routerLinkActive]="['active']"><a href="index.html" class="nav-link" [routerLink]="['/']"><b>Home</b></a></li>
+        <li class="nav-item" [routerLinkActive]="['active']"><a class="nav-link" [routerLink]="['/service']"><b>Services</b></a></li>
+        <li class="nav-item " [routerLinkActive]="['active']"><a class="nav-link" [routerLink]="['/gallery']"><b>Gallery</b></a></li>
+        <li class="nav-item" [routerLinkActive]="['active']"><a class="nav-link" [routerLink]="['/about']"><b>About</b></a></li>
+        <li class="nav-item" [routerLinkActive]="['active']"><a class="nav-link" [routerLink]="['/blog']"><b>Blog</b></a></li>
+        <li class="nav-item" [routerLinkActive]="['active']"><a class="nav-link" [routerLink]="['/contact']"><b>Contact</b></a></li>
+        <li *ngIf="authService.loggedIn() && userRegistered.userType == 'owner'" class="nav-item" [routerLinkActive]="['active']"><a class="nav-link" [routerLink]="['/profile']"><b>Profile</b></a></li>
+        <li *ngIf="authService.loggedIn() && userRegistered.userType == 'owner'" class="nav-item" [routerLinkActive]="['active']"><a class="nav-link" [routerLink]="['/salonAll']"><b>Salons</b></a></li>
+        <li *ngIf="authService.loggedIn() && userRegistered.userType == 'customer'" class="nav-item" [routerLinkActive]="['active']"><a class="nav-link" [routerLink]="['/search']"><b>View Salons</b></a></li>
+        <li *ngIf="!authService.loggedIn()" class="nav-item"><a class="nav-link" (click)="signUp()"><b>Sign Up</b></a></li>
+        <li *ngIf="!authService.loggedIn()" class="nav-item"><a class="nav-link" (click)="signIn()"><b>Sign In</b></a></li>
+        <li *ngIf="authService.loggedIn()" class="nav-item"><a class="nav-link" (click)="logout()"><b>Logout</b></a></li>
+        <!--        <p *ngIf="!authService.loggedIn()" style="margin-top: 10px; padding: 0px"><a class="btn btn-primary py-3 px-4" (click)="signUp()">Sign Up</a></p>&nbsp;&nbsp;-->
+        <!--        <p *ngIf="!authService.loggedIn()" style="margin-top: 10px"><a class="btn btn-primary py-3 px-4" (click)="signIn()">Sign In</a></p>-->
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
